@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#ffffff">
+<title>iPhone 18 Pro Max</title><meta name="description" content="探索手机设计，切换机型、配色与三维视角。">
+<link rel="icon" href="data:,"><link rel="stylesheet" href="./style.css">
+<script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/":"./vendor/addons/"}}</script><script type="module" src="./app.js"></script>
+</head>
+<body>
+<header><h1 id="current-model">iPhone 18 Pro Max</h1><button id="collection-toggle" aria-expanded="false" aria-controls="collection-panel">全部机型 <span aria-hidden="true">＋</span></button></header>
+<main>
+<nav class="catalog-bar" aria-label="选择手机"><div id="brand-tabs" role="group" aria-label="品牌"></div><label class="model-picker"><span>机型</span><select id="model-select" aria-label="选择机型"></select></label></nav>
+<section class="gallery" aria-label="手机三维展厅">
+<div id="viewport" aria-label="可拖动旋转的三维手机模型"></div>
+<div class="view-menu" role="group" aria-label="观察视角"><button data-view="hero" class="active" aria-pressed="true">整体</button><button data-view="front" aria-pressed="false">正面</button><button data-view="back" aria-pressed="false">背面</button><button data-view="camera" aria-pressed="false">镜头特写</button><button data-view="side" aria-pressed="false">侧边细节</button></div>
+<div id="loading" role="status"><div class="loader-ring"></div><p id="load-progress">加载三维模型…</p></div>
+<div id="fallback" hidden><img id="fallback-image" alt="手机外观参考"><p>当前设备无法启动 3D 展示</p><small class="fallback-caption">静态外观参考 · 当前配色请在 3D 模式查看</small><button id="retry">重新加载</button></div>
+<div class="bottom-panel">
+<div class="interaction-hint"><p>拖动旋转 · 滚轮缩放<small>触屏双指缩放</small></p></div>
+<div class="finish"><div class="finish-heading"><span id="finish-name">勃艮第酒红色</span></div><div id="swatches" role="group" aria-label="机身配色"></div></div>
+<div class="utilities"><button id="auto-rotate" aria-pressed="false" title="自动旋转">↻ <span>自动旋转</span></button><button id="reset" title="复位视角">↺ <span>复位</span></button><button id="fullscreen" title="全屏展示">⛶ <span>全屏</span></button></div>
+</div>
+</section>
+<section id="collection-panel" hidden aria-label="机型列表"><h2>全部机型</h2><div id="exhibit-list"></div></section>
+</main>
+<footer><span id="model-origin">官方 AR 外观</span><button id="source-toggle" aria-expanded="false" aria-controls="source-panel">模型说明</button></footer>
+<div id="source-panel" hidden><p id="source-note"></p><a href="https://www.apple.com/iphone-18-pro/" target="_blank" rel="noreferrer">查看 Apple 产品资料 ↗</a></div>
+</body></html>
